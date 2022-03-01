@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проба</title>
+    <link rel="stylesheet" href="src/style/main.css">
+</head>
+<body onload="getAllPosts();">
+    <div class="windowModal none">
+        <form id="modal" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+            <div id="form-title">
+                <label>Title</label>
+                <input id="title" type="text">
+            </div>
+            <div id="form-body">
+                <label>Body</label>
+                <input id="body" type="text">
+            </div>
+            <button id="addItem">Add</button>
+        </form>
+    </div>
+    <div id="wrapper">
+        <button id="add">Click!</button>
+        <input type="text" id="search"/>
+        <button id="clickSearch">&#128269;</button>
+        <!--Table-->
+        <table id="post">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th class="title" onclick="Click()">Title</th>
+                    <th>Body</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="row">
+                <!--data from json-->
+            </tbody>
+        </table>
+    </div>
+    <!--Pagination-->
+    <div class="pagenumbers" id="pagination"></div>
+    <script src="src/js/logic.js"></script>
+</body>
+</html>
